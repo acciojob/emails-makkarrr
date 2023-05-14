@@ -28,7 +28,7 @@ public class Workspace extends Gmail{
         // at a particular time, you can only be present in at most one meeting
         // if you want to attend a meeting, you must join it at its start time and leave at end time.
 
-        List<Meeting> sortedCalender = List.copyOf(calendar);
+        List<Meeting> sortedCalender = new ArrayList<>(List.copyOf(calendar));
         Collections.sort(sortedCalender, (x,y) -> x.getEndTime().compareTo(y.getEndTime()) );
 
 //        ArrayList<Pair<LocalTime, Integer>> endTimes = new ArrayList<>();
